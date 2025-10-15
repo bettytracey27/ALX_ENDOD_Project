@@ -1,24 +1,16 @@
-# ENDOD Water Tank Cleaning Service - Capstone Project
+# React + Vite
 
-##  Project Overview
-ENDOD is a professional water tank cleaning service based in Addis Ababa, Ethiopia.  
-This capstone project aims to develop a modern **web application** that allows customers to easily book cleaning services, contact the company, and view information about the business.  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-The project will feature:
-- A **React.js frontend** for an interactive and user-friendly experience.  
-- A **PHP/MySQL backend** for managing data, bookings, and service information.  
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-##  Current Progress (Week 4)
-**This week’s achievements:**
--  Created the main project structure (`frontend`, `backend`, `docs`, etc.).  
--  Initialized a new React app for the frontend (`endod-frontend`).  
--  Started integrating **Tailwind CSS** for styling (setup in progress).  
--  Organized folder structure for scalability and clarity.  
--  Prepared to connect backend and frontend for future development.  
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Expanding the ESLint configuration
 
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
