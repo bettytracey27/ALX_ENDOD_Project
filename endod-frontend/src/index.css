@@ -1,6 +1,10 @@
+@import "@tailwindcss/postcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
+/* Test to confirm Tailwind works */
+.test-box {
+  @apply bg-red-500 text-white p-4 text-center font-bold;
+}

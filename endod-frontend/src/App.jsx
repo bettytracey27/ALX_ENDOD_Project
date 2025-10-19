@@ -1,6 +1,15 @@
 import React, { useEffect, useRef } from "react";
+import AboutSection from "./components/AboutSection";
 import logo from "/assets/images/logo.png";
 import hero from "/assets/images/hero.jpg";
+import Navbar from "./components/Navbar";
+import ServicesSection from "./components/ServicesSection";
+import WorkSection from "./components/WorkSection";
+import ContactSection from "./components/ContactSection";
+
+
+ // adjust path if Navbar.jsx is in components folder
+
 
 export default function App() {
   const yearsRef = useRef(null);
@@ -36,27 +45,12 @@ export default function App() {
   return (
     <div className="font-sans antialiased">
       {/* Navbar */}
-      <nav className="bg-[#d4f6f2] py-4 shadow-md sticky top-0 z-50">
-        <div className="container mx-auto flex justify-between items-center px-4">
-          <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="ENDOD" className="w-14 h-auto rounded-sm" />
-            <span className="text-[#0f6c75] font-bold text-xl">ENDOD</span>
-          </a>
-
-          <ul className="hidden md:flex gap-6 text-gray-800 font-medium items-center">
-            <li><a href="#home" className="hover:font-semibold">Home</a></li>
-            <li><a href="#about" className="hover:font-semibold">About Us</a></li>
-            <li><a href="#services" className="hover:font-semibold">Services</a></li>
-            <li><a href="#work" className="hover:font-semibold">Our Work</a></li>
-            <li><a href="#contact" className="px-4 py-2 rounded-full bg-[#42c2d1] text-white font-bold">Contact Us</a></li>
-          </ul>
-
-          <div className="md:hidden">
-            <a href="#contact" className="px-3 py-2 rounded bg-[#42c2d1] text-white font-semibold">Contact</a>
-          </div>
-        </div>
-      </nav>
-
+    <Navbar />
+    <AboutSection />
+    <ServicesSection />
+    <WorkSection />
+     <ContactSection />
+     
       {/* Hero Section */}
       <section
         id="home"
@@ -66,12 +60,13 @@ export default function App() {
 
         <div className="relative container mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
           {/* Left: Text */}
-          <div className="md:w-1/2 text-center md:text-left text-[#0e4a74] drop-shadow-lg">
+          <div className="md:w-1/2 text-center md:text-left text-[#0e4a74] drop-shadow-lg z-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
               ENDOD WATER TANKER AND WATER HOLE CLEANING SERVICE PLC
             </h1>
             <p className="text-md md:text-lg mb-6 max-w-xl text-[#063f5c]">
-              Safe, Hygienic, and Certified cleaning for homes & businesses. We follow professional standards to ensure your water is clean, safe, and pure.
+              Safe, Hygienic, and Certified cleaning for homes & businesses.
+              We follow professional standards to ensure your water is clean, safe, and pure.
             </p>
 
             <div className="mt-4">
@@ -100,7 +95,7 @@ export default function App() {
           </div>
 
           {/* Right: Image */}
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 flex justify-center z-10">
             <div className="rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(41,119,161,0.7)] border-4 border-[#0e4a74]/30 hover:scale-105 transition-transform duration-500">
               <img
                 src={hero}
@@ -114,7 +109,7 @@ export default function App() {
 
       {/* Stats Section */}
       <section className="bg-[#2977a1] text-white py-12">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div>
               <h2 ref={yearsRef} className="text-4xl font-bold">0</h2>
@@ -132,54 +127,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* About Section (Updated & More Readable) */}
-      <section id="about" className="relative bg-[#0e4a74] text-white py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0e4a74] via-[#1b6e8d] to-[#0f6c75] opacity-95"></div>
-
-        <div className="relative container mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
-          {/* Left: Text */}
-          <div className="md:w-2/3 text-white drop-shadow-lg">
-            <h2 className="text-4xl font-extrabold mb-3 text-[#d4f6f2]">Who We Are</h2>
-            <h5 className="text-[#6ee7e7] font-semibold mb-6 text-lg">
-              Clean Water • Safe Homes • Healthier Communities
-            </h5>
-            <p className="leading-relaxed mb-6 max-w-2xl text-[#eaf9ff] text-base">
-              <strong className="text-white">ENDOD</strong> is dedicated to protecting families and businesses from contaminated water tanks using advanced cleaning technologies and certified professionals. Every service we provide ensures clean, safe, and reliable water for your home and community.
-            </p>
-
-            <div className="flex flex-wrap gap-6 mb-8 justify-start">
-              <div className="text-center bg-[#42c2d1]/20 px-6 py-5 rounded-xl shadow-md hover:bg-[#42c2d1]/40 transition-all">
-                <i className="fa-solid fa-shield-halved fa-2x text-[#6ee7e7] mb-3"></i>
-                <p className="font-bold text-[#f7f9fb]">Certified Hygiene</p>
-              </div>
-              <div className="text-center bg-[#42c2d1]/20 px-6 py-5 rounded-xl shadow-md hover:bg-[#42c2d1]/40 transition-all">
-                <i className="fa-solid fa-star fa-2x text-[#6ee7e7] mb-3"></i>
-                <p className="font-bold text-[#f7f9fb]">Trusted by 2000+ Clients</p>
-              </div>
-              <div className="text-center bg-[#42c2d1]/20 px-6 py-5 rounded-xl shadow-md hover:bg-[#42c2d1]/40 transition-all">
-                <i className="fa-solid fa-droplet fa-2x text-[#6ee7e7] mb-3"></i>
-                <p className="font-bold text-[#f7f9fb]">Pure Water Promise</p>
-              </div>
-            </div>
-
-            <a
-              href="#about"
-              className="inline-block bg-[#d4f6f2] text-[#0e4a74] px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-white transition-all"
-            >
-              Learn More About Us
-            </a>
-          </div>
-
-          {/* Right: Image */}
-          <div className="md:w-1/3 text-center">
-            <img
-              src="/assets/images/photo_2025-08-09_21-41-36.jpg"
-              alt="About Us"
-              className="rounded-2xl shadow-[0_0_30px_rgba(66,194,209,0.7)] hover:scale-105 transition-transform w-full object-cover h-[380px] border-4 border-[#42c2d1]/50"
-            />
-          </div>
-        </div>
-      </section>
+      {/* About Section (imported component) */}
+      <AboutSection />
 
       {/* Services Section */}
       <section id="services" className="bg-[#2977a1] text-white py-16">
@@ -261,6 +210,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
