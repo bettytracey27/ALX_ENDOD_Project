@@ -14,30 +14,8 @@ The site allows customers to learn about our services, view our work, and contac
   - Services
   - Our Work
   - Contact Us
-  - Booking
-- Dynamic content (services, gallery, forms) powered by PHP + MySQL
-- Contact & Booking forms (data stored in database)
-- Admin dashboard:
-  - Manage services
-  - Manage gallery
-  - View messages & bookings
-  - Basic statistics
 
-## Tech Stack
-- **Frontend:** HTML, CSS, Bootstrap 5, JavaScript
-- **Backend:** PHP
-- **Database:** MySQL
-- **Icons:** FontAwesome
-
-## Project Structure
-endod_website/
-├── css/ # Stylesheets
-├── images/ # Images & assets
-├── includes/ # Shared header & footer
-├── js/ # JavaScript files
-├── index.php # Homepage
-├── about.php # About page
-├── services.php # Services page
-├── work.php # Our work gallery
-├── contact.php # Contact & booking
-└── README.md # Project description
+ Tech Stack
+Frontend Framework >	React + Vite
+Styling >	Tailwind CSS
+Icons >	Lucide Icons / Font Awesome
